@@ -56,6 +56,7 @@ p a:hover {
 	display: block;
 	margin: 0;
 	padding: 0;
+	width: 170px;
 }
 #header ul {
 	margin: 0;
@@ -77,6 +78,7 @@ p a:hover {
 	padding: 0 0 3px;
 	text-decoration: none;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 #header ul li a:hover, #header ul li.selected a {
 	color: #0ba39c;
