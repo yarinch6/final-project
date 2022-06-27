@@ -1,0 +1,19 @@
+.tr,td img{
+    width: 170px;
+    border: 2px solid #292929;
+    border-bottom: none;
+}
+
+.tr,td a{
+    cursor: pointer;
+}
+
+.tr,td div{
+    font-family: fantasy;
+    font-size: 20px;
+    border: 2px solid #292929;
+    background-color: #292929;
+    color: rgb(237, 240, 243);
+}
+
+
