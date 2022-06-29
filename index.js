@@ -33,6 +33,36 @@ app.get('/getCustomer', (req, res) => {
   mysave(newCustomer);
 })
 
+app.get('/getProduct', (req, res) => {
+  async function myProduct() {
+    await mydb.getProducts().then((result) => { res.send(result)});
+  }
+  myProduct();
+})
+
+app.get('/searchProduct', (req, res) => {
+    
+  async function mySearch() {
+    await mydb.search().then((result) => res.send(result));
+  }
+  mySearch();
+  
+})
+
+app.get('/getOrder', (req, res) => {
+  var newOrder = {
+    name:req.query.firstname,
+    email:req.query.email,
+    address:req.query.address,
+    city:req.query.city 
+  }
+
+  async function mysave1(orderDetails) {
+    await mydb.saveOrder(orderDetails).then((result) => res.send(result));
+  }
+
+  mysave1(newOrder);
+})
 
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)
