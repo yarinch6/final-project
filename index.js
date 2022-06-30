@@ -51,10 +51,18 @@ app.get('/searchProduct', (req, res) => {
 
 app.get('/getOrder', (req, res) => {
   var newOrder = {
+    product_Name:req.query.name,
+    price:req.query.price,
+    quantity:req.query.quantity,
     name:req.query.firstname,
     email:req.query.email,
     address:req.query.address,
-    city:req.query.city 
+    city:req.query.city,
+    card_name:req.query.cardname,
+    card_number:req.query.cardnumber,
+    exp_month:req.query.expmonth,
+    exp_year:req.query.expyear,
+    cvv:req.query.cvv 
   }
 
   async function mysave1(orderDetails) {
@@ -63,6 +71,8 @@ app.get('/getOrder', (req, res) => {
 
   mysave1(newOrder);
 })
+
+
 
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)

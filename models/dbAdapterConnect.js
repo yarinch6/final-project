@@ -59,7 +59,7 @@ async function search() {
 async function saveOrder(orderDetails) {
     var Client = new MongoClient(uri);
     await Client.connect();
-    var col = Client.db("SukenikHairDesign").collection("customers");
+    var col = Client.db("SukenikHairDesign").collection("orders");
     var result = await col.insertOne(orderDetails);
     Client.close();
     return result;
