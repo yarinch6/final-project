@@ -1,3 +1,7 @@
+function show_alert() {
+    alert("added to your shopping cart !");
+  }
+
 function showTable() {
     fetch('/getProduct')
         .then(Response => Response.text())
@@ -27,12 +31,11 @@ function showTable() {
                         <td><img src="/images/${element.image}.png" width="100px"></td>
   
                         <label for="quantity" name="price"></label>
-                        <td id="price"><a><input type="number" id="quantity" name="quantity" min="0" max="100"></a></td>
+                        <td id="price"><a><input type="number" id="quantity" name="quantity" min="1" max="10"></a></td>
                         
 
-                        <td><a href=""><input type="submit" value="Add to cart"></a></td>
+                        <td><input type="submit" value="Add to cart"></td>
 
-                        <td><button onclick="fetchPage('paymentPage.html')">BUY NOW</button></td>
                     </tr>
                     </table></form></center>
                 `
